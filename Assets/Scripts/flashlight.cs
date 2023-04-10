@@ -25,7 +25,7 @@ public class flashlight : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             toggle = !toggle;
-            //toggleSound.Play();
+            toggleSound.Play();
             if(toggle == false)
             {
                 light.SetActive(false);
