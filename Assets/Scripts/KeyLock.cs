@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class flashlightPickup : MonoBehaviour
+public class KeyLock : MonoBehaviour
 {
-    public GameObject interactionText, flashlight_world, flashlight_hand;
-    public AudioSource pickup;
+    public GameObject interactionText, keyHand;
+    public AudioSource unlock;
     public bool interactable;
+    [HideInInspector]
+    public GameObject keyLock;
+
+    void Start()
+    {
+        keyLock = this.gameObject;
+    }
 
     void OnTriggerStay(Collider other)
     {
@@ -28,15 +35,18 @@ public class flashlightPickup : MonoBehaviour
     {
         if (interactable == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && keyHand.active == true)
             {
                 interactionText.SetActive(false);
                 interactable = false;
-                //pickup.Play(); // to play sound
-                flashlight_hand.SetActive(true);
-                flashlight_world.SetActive(false);
+                unlock.Play();
+                keyLock.SetActive(false);
+                keyHand.SetActive(false);
+            }
+            else 
+            {
+
             }
         }
     }
 }
-

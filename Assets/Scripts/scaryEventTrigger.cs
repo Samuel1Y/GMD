@@ -8,13 +8,15 @@ public class scaryEventTrigger : MonoBehaviour
     public AudioSource scareSound;
     public Collider collision;
 
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             scare.SetActive(true);
-            //scareSound.Play();
+            scareSound.Play();
             collision.enabled = false;
         }
     }
+
 }
