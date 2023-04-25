@@ -3,29 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class mainMenu : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
-    public GameObject loadingscreen;
-    public string sceneName;
+    public GameObject mainPanel, loadingscreen, controlsPanel;
 
     void Start()
     {
+        mainPanel.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
 
-    public void playGame()
+    public void PlayGame()
     {
         loadingscreen.SetActive(true);
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("GameScene");
     }
-    public void quitGame()
+    public void OpenControls()
+    {
+        mainPanel.SetActive(false);
+        controlsPanel.SetActive(true);
+    }
+    public void CloseControls()
+    {
+        controlsPanel.SetActive(false);
+        mainPanel.SetActive(true);
+    }
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void QuitGame()
     {
         Debug.Log("Quit Game");
         Application.Quit();
-    }
-    public void twitchLink()
-    {
-        Application.OpenURL("https://www.twitch.tv/magnoremo");
     }
 }
