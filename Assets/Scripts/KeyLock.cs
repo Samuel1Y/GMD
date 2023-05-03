@@ -43,10 +43,6 @@ public class KeyLock : MonoBehaviour
                 keyLock.SetActive(false);
                 keyHand.SetActive(false);
             }
-            else 
-            {
-
-            }
         }
     }
 }

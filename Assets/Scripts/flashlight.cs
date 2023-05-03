@@ -14,7 +14,7 @@ public class flashlight : MonoBehaviour
         {
             light.SetActive(false);
         }
-        if (toggle == true)
+        else
         {
             light.SetActive(true);
         }
@@ -30,7 +30,7 @@ public class flashlight : MonoBehaviour
             {
                 light.SetActive(false);
             }
-            if (toggle == true)
+            else
             {
                 light.SetActive(true);
             }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class flashlightPickup : MonoBehaviour
 {
     public GameObject interactionText, flashlight_world, flashlight_hand;
-    public AudioSource pickup;
     public bool interactable;
 
     void OnTriggerStay(Collider other)
@@ -32,7 +31,6 @@ public class flashlightPickup : MonoBehaviour
             {
                 interactionText.SetActive(false);
                 interactable = false;
-                //pickup.Play(); // to play sound
                 flashlight_hand.SetActive(true);
                 flashlight_world.SetActive(false);
             }

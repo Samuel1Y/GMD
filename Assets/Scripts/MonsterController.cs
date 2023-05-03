@@ -32,8 +32,6 @@ public class MonsterController : MonoBehaviour
         if (isChasing)
         {
             enemyAgent.SetDestination(playerPosition.position);
-            //StartChasing();
-            //StartCoroutine(StopChasing()); //stop the chase after some time
         }
         else //walk to random points on map
         {
@@ -91,6 +89,5 @@ public class MonsterController : MonoBehaviour
                 StartChasing();
             }
         }
-
     }
 }
