@@ -3,6 +3,7 @@
  Video:
    
   * [Sounds](https://pixabay.com)
+  * [Textures](https://freepbr.com)
   * [Unity FPS Controller script](https://sharpcoderblog.com/blog/unity-3d-fps-controller)
   * [grabbing objects script](https://www.youtube.com/watch?v=6bFCQqabfzo)
   * [random AI movement (tutorial)](https://www.youtube.com/watch?v=dYs0WRzzoRc)
